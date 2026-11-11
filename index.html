@@ -1,0 +1,52 @@
+!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rodovia Zero</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Rodovia Zero</h1>
+    <span class="tag">Desvie do tráfego, junte moedas.</span>
+  </header>
+
+  <section class="hud" aria-label="Placar">
+    <div class="stat"><span class="k">Pontos</span><span class="v" id="sScore">0</span></div>
+    <div class="stat"><span class="k">Velocidade</span><span class="v"><span id="sSpeed">0</span><small>km/h</small></span></div>
+    <div class="stat"><span class="k">Recorde</span><span class="v" id="sBest">0</span></div>
+    <div class="stat"><span class="k">Vidas</span><span class="pips" id="sLives" aria-live="polite"></span></div>
+  </section>
+
+  <div class="stage">
+    <canvas id="game" aria-label="Pista de corrida"></canvas>
+    <div class="overlay" id="overlay">
+      <div class="card">
+        <h2 id="ovTitle">Pronto para largar?</h2>
+        <p id="ovText">Você tem três vidas. A estrada acelera a cada 500 metros.</p>
+        <button class="primary" id="ovBtn" type="button">Largar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="pad" aria-label="Controles de toque">
+    <button type="button" id="btnL" aria-label="Virar à esquerda">&larr;</button>
+    <button type="button" id="btnR" aria-label="Virar à direita">&rarr;</button>
+  </div>
+
+  <div class="row">
+    <button type="button" id="btnPause">Pausar</button>
+    <button type="button" id="btnSound">Som: ligado</button>
+  </div>
+
+  <p class="help">Teclado: <kbd>&larr;</kbd> <kbd>&rarr;</kbd> ou <kbd>A</kbd> <kbd>D</kbd> para guiar, <kbd>Espaço</kbd> para pausar. No celular, segure os botões ou as laterais da pista.</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
